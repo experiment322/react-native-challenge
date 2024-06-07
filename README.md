@@ -111,7 +111,7 @@ Explain in a Readme file how to run your code.
 
 ## Timeline
 
-The challenge should take around 5-6h, but you are welcome to spend more time on it if you want to perfect your solution. The challenge must be submitted within 24h after receiving it.
+The challenge should take around 4-5h, but you are welcome to spend more time on it if you want to perfect your solution. The challenge must be submitted within 24h after receiving it.
 
 If you have ideas of how to improve your solution further, please share them in the Readme file of your repository.
 
