@@ -54,7 +54,7 @@ The order of items from the list should be like this:
 
 ![step-one](/assets/examples/step-one.png)
 
-The buttons should not do anything if tapped, but should provide feedback. The button's content is variable so make sure that users can reach all of them.
+The filter buttons (distance, time, and price) should not trigger any actions when tapped, but they should provide visual feedback to indicate they have been pressed. <u>The button's content is variable so make sure that users can reach all of them</u>.
 
 ### 2. Intermediate and last level
 
@@ -87,6 +87,13 @@ If there are only 2 items in the result set. Display them horizontally like this
 ```
 1  2
 ```
+
+### Handlebar
+
+Using the handlebar you can collapse the the container using gestures.
+
+![collapsed](/assets/collapsed.png)
+**Note that the image is for demonstrating the collapsing**
 
 ### Constraints
 
