@@ -88,13 +88,6 @@ If there are only 2 items in the result set. Display them horizontally like this
 1  2
 ```
 
-### Handlebar
-
-Using the handlebar you can collapse the the container using gestures.
-
-![collapsed](/assets/collapsed.png)
-**Note that the image is for demonstrating the collapsing**
-
 ### Constraints
 
 1. <u>The container should resize itself based on the number of items displayed:</u>
