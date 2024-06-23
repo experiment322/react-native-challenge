@@ -1,14 +1,64 @@
+# The solution (and how to run it)
+
+<https://github.com/experiment322/react-native-challenge/assets/26217940/8c36eba5-f700-4c1c-a519-cec7df58e7df>
+
+Some versions:
+
+- nvm: 0.39.5
+- node: 20.12.0
+- npm: 10.8.1
+- yarn: 1.22.22
+- rbenv: 1.2.0
+- ruby: 3.2.2
+- bundle: 2.5.10
+- ios-deploy: 1.12.2
+- OpenJDK: 17.0.11
+- Xcode: 15.3
+- Android Studio: 2024.1.1
+
+```sh
+npm install
+npm run start:server
+cd CuisineNavigation
+yarn
+bundle install
+cd ios
+bundle exec pod install
+cd ..
+yarn start --reset-cache
+# after the dev server started, you can press "i" or "a"
+# to build and run the app for either ios or android
+
+# run this for android (with emulator booted/device connected)
+# to be able to hit the api server
+adb reverse tcp:3000 tcp:3000
+```
+
+I used jotai for state management, reanimated and gesture-handler for animations.
+
+I would've also used expo-image for image preloading/in-memory caching, but in the end I thought it was too much.
+
+I've handled as much error states as I could think of for the data and also handled a lot of layout states
+for the animation to be smooth and foolproof as much as possible:
+
+- animated content size changes which also work if they happen during dragging
+- interrupting and correctly resuming the drag while not finished
+- made collapsing/expanding speed decay based on the velocity of the finger when released then calculated the closest snap point and snapped to it with a constant speed
+- prevent dragging when content height is 0
+- scrolled the list of categories to the beginning when navigating to another parent category
+- also made the collapsible content expand if it was collapsed but the user navigated to another category
+
 # The challenge
 
 Implement a React Native application for a cuisine navigation app.
 
 ## Screens
 
-| Screen             | Description            |
-| ------------------ | ---------------------- |
-| Root Level         | https://zpl.io/Gn7x1z9 |
-| Intermediate Level | https://zpl.io/1MyMzgw |
-| Last Level         | https://zpl.io/QM0MKzn |
+| Screen             | Description              |
+| ------------------ | ------------------------ |
+| Root Level         | <https://zpl.io/Gn7x1z9> |
+| Intermediate Level | <https://zpl.io/1MyMzgw> |
+| Last Level         | <https://zpl.io/QM0MKzn> |
 
 ## The interface
 
@@ -64,7 +114,7 @@ We can navigate back one level by tapping on the navigation bar.
 
 We can return to the root level by tapping on the X button inside the navigation bar.
 
-### Examples:
+### Examples
 
 1. Tapping on Europe should take you to see the following:
 
